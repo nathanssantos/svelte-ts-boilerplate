@@ -2,32 +2,32 @@
 
 ## Setup
 
-1 - Instale as dependências do projeto:
+1 - Install the project dependencies:
 
 ```
 yarn
 ```
 
-2 - Prepare o tema da biblioteca de estilo:
+2 - Prepare the theme library style:
 
 ```
 yarn prepare
 ```
 
-3 - Instale as extensões necessárias para desenvolvimento no VS Code:
+3 - Install all the necessary extensions on VS Code:
 
 - Svelt for VS Code
 - Eslint
 - Prettier
 - EditorConfig
 
-## Executando o projeto
+## Running the project
 
 ```
 yarn dev
 ```
 
-_O comando `yarn prepare` deve ser executado sempre que o arquivo `theme/_smui-theme.scss` for modificado._
+_The command `yarn prepare` must be executed every time the `theme/_smui-theme.scss` file is modified._
 
 ## Build
 
@@ -35,7 +35,7 @@ _O comando `yarn prepare` deve ser executado sempre que o arquivo `theme/_smui-t
 yarn build
 ```
 
-Para visualizar o preview do build:
+To visualize the preview:
 
 ```
 yarn preview

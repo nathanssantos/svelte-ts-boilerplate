@@ -14,7 +14,7 @@ yarn
 yarn prepare
 ```
 
-3 - Install all the necessary extensions on VS Code:
+3 - Install all the necessary extensions for VS Code:
 
 - Svelt for VS Code
 - Eslint

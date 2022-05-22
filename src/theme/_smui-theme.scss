@@ -1,0 +1,91 @@
+$primary: #222d3d;
+$secondary: #ddd;
+$background: #fff;
+$surface: #fff;
+$error: #b71c1c;
+$info: #40b3ff;
+$on-primary: #fff;
+$on-secondary: #000;
+$on-surface: #000;
+$on-error: #fff;
+
+$gray-100: #eee;
+$gray-200: #555;
+
+@use "sass:color";
+
+@use "@material/theme/index" as theme with (
+  $primary: $primary,
+  $secondary: $secondary,
+  $background: $background,
+  $surface: $surface,
+  $error: $error,
+  $on-primary: $on-primary,
+  $on-secondary: $on-secondary,
+  $on-surface: $on-surface,
+  $on-error: $on-error
+);
+
+:root {
+  --mdc-theme-primary: #{$primary};
+  --mdc-theme-secondary: #{$secondary};
+  --mdc-theme-background: #{$background};
+  --mdc-theme-surface: #{$surface};
+  --mdc-theme-error: #{$error};
+  --mdc-theme-on-primary: #{$on-primary};
+  --mdc-theme-on-secondary: #{$on-secondary};
+  --mdc-theme-on-surface: #{$on-surface};
+  --mdc-theme-on-error: #{$on-error};
+
+  --gray-100: #{$gray-100};
+  --gray-200: #{$gray-200};
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+html,
+body {
+  background-color: $surface;
+  color: $on-surface;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: $info;
+
+  & :visited {
+    color: color.scale($info, $lightness: -35%);
+  }
+}

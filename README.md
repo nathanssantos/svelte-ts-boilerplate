@@ -18,7 +18,7 @@ yarn prepare
 
 3 - Install all the necessary extensions for VS Code:
 
-- Svelt for VS Code
+- Svelte for VS Code
 - Eslint
 - Prettier
 - EditorConfig

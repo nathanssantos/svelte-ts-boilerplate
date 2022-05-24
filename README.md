@@ -1,6 +1,6 @@
 # Svelte TypeScript Boilerplate
 
-Boilerplate for Sevelte.js applications, built with Sevelte Material UI as a component library and Vite as a frontend build tool.
+Boilerplate for Sevelte.js applications, built with Sevelte Material UI as a component library and Vite as a build tool.
 
 ## Setup
 

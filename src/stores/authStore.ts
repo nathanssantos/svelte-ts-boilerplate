@@ -1,21 +1,18 @@
 import { derived, writable } from 'svelte/store';
 import Cookies from 'js-cookie';
-import type { AxiosResponse } from 'axios';
+import type { AxiosResponse, AxiosError } from 'axios';
 import api from '../services/api';
 
-// State
 const user = writable(null as User);
 const getMeStatus = writable('idle' as FetchStatus);
 const authenticateStatus = writable('idle' as FetchStatus);
 
-// Getters
 const isAuthenticated = derived(
   user,
   ($user) => !!Cookies.get('sveltetsboilerplate.token')?.length && !!$user?.id,
   false,
 );
 
-// Actions
 const authenticate = async (payload: {
   email: string;
   password: string;
@@ -100,20 +97,24 @@ const unauthenticate = () => {
   user.update(() => null);
 };
 
+api.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  (error: AxiosError) => {
+    if (error.response.status === 401) unauthenticate();
+    return error;
+  },
+);
+
 if (Cookies.get('sveltetsboilerplate.token')?.length) void getMe();
 
 export default {
-  state: {
-    user,
-    authenticateStatus,
-    getMeStatus,
-  },
-  getters: {
-    isAuthenticated,
-  },
-  actions: {
-    authenticate,
-    getMe,
-    unauthenticate,
-  },
+  user,
+  authenticateStatus,
+  getMeStatus,
+  isAuthenticated,
+  authenticate,
+  getMe,
+  unauthenticate,
 };

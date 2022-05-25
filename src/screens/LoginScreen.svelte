@@ -73,15 +73,11 @@ import Textfield from '@smui/textfield';
 import HelperText from '@smui/textfield/helper-text';
 import Card from '@smui/card';
 import Button from '@smui/Button';
-
+import { authStore } from '../stores';
 import Loader from '../components/Loader.svelte';
-
-import authStore from '../stores/authStore';
-
 import { INVALID_EMAIL, REQUIRED_FIELD } from '../constants/messages';
 
-const { authenticateStatus } = authStore.state;
-const { authenticate } = authStore.actions;
+const { authenticateStatus, authenticate } = authStore;
 
 const { form, errors, handleSubmit, validateField } = createForm({
   initialValues: {

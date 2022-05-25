@@ -10,13 +10,12 @@
 
 <script lang="ts">
 import { Router, Route } from 'svelte-navigator';
-import authStore from '../stores/authStore';
+import { authStore } from '../stores';
 import LoginScreen from '../screens/LoginScreen.svelte';
 import HomeScreen from '../screens/HomeScreen.svelte';
 import Loader from './Loader.svelte';
 
-const { isAuthenticated } = authStore.getters;
-const { getMeStatus } = authStore.state;
+const { isAuthenticated, getMeStatus } = authStore;
 </script>
 
 <Router>

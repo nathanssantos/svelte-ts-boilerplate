@@ -1,11 +1,11 @@
 <script>
 import { useFocus } from 'svelte-navigator';
 import Button from '@smui/button';
-import authStore from '../stores/authStore';
+import { authStore } from '../stores';
 
 const registerFocus = useFocus();
 
-const { unauthenticate } = authStore.actions;
+const { unauthenticate } = authStore;
 </script>
 
 <main class="login-screen" use:registerFocus>

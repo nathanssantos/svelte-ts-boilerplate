@@ -106,40 +106,6 @@
       background-color: rgba(0, 0, 0, 0.5);
     }
 
-    &__top {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      margin-bottom: 4.5rem;
-      max-width: 64rem;
-
-      @media screen and(min-width: $bp) {
-        justify-content: space-between;
-      }
-
-      img {
-        max-width: 9.125rem;
-        display: none;
-
-        @media screen and(min-width: $bp) {
-          display: initial;
-        }
-      }
-    }
-
-    &__logo {
-      img {
-        max-width: 23.5rem;
-        display: initial;
-        width: 100%;
-
-        @media screen and(min-width: $bp) {
-          max-width: 18.75rem;
-        }
-      }
-    }
-
     :global(.mdc-card) {
       width: 100%;
       max-width: 26.25rem;
@@ -160,10 +126,6 @@
           font-size: 1.375rem;
           font-weight: 400;
           color: var(--gray-200);
-        }
-
-        &__icon {
-          display: flex;
         }
       }
 
@@ -188,17 +150,6 @@
       &__field {
         margin-bottom: 1rem;
         width: 100%;
-      }
-
-      &.error {
-        .login-form {
-          &__message {
-            &.error {
-              color: var(--mdc-theme-error);
-              padding: 0 1.5rem 0.35rem;
-            }
-          }
-        }
       }
     }
   }

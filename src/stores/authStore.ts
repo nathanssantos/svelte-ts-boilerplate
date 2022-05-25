@@ -95,7 +95,7 @@ const getMe = async (): Promise<StoreActionResponse> => {
 };
 
 const unauthenticate = () => {
-  api.defaults.headers.common["Authorization"] = null;
+  api.defaults.headers.common["Authorization"] = "";
   Cookies.remove("sveltetsboilerplate.token");
   user.update(() => null);
 };

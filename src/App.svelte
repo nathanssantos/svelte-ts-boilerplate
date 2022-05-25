@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Router from "./components/Router.svelte";
+import Router from './components/Router.svelte';
 </script>
 
 <Router />

@@ -10,6 +10,6 @@
   "semi": true,
   "useTabs": false,
   "printWidth": 96,
-  "endOfLine": "lf",
+  "endOfLine": "crlf",
   "arrowParens": "always"
 }

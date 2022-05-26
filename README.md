@@ -1,6 +1,6 @@
 # Svelte TypeScript Boilerplate
 
-Boilerplate for Svelte.js applications, built with Svelte Material UI as a component library and Vite as a build tool.
+Boilerplate for [Svelte](https://svelte.dev) applications, built with [Svelte Material UI](https://sveltematerialui.com) as a component library and [Vite](https://vitejs.dev) as a build tool.
 
 ## Setup
 
